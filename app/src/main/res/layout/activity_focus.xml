@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <!--  <import type="com.monkeyliu.smartfocusdemo.model.User"/>-->
+        <variable
+            name="userInfo"
+            type="com.monkeyliu.smartfocusdemo.model.User" />
+        <variable
+            name="person"
+            type="com.monkeyliu.smartfocusdemo.modelview.MainEvent" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/title_layout"/>
+        <com.monkeyliu.smartfocus.AutoFocusFrameLayout
+            android:id="@+id/focus_framelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="30dp"
+                        android:background="#00ff00"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:onClick="@{()->person.onClickBinding(userInfo)}"
+                        android:text="@{userInfo.name}" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="30dp"
+                        android:background="#ff0000"
+                        android:focusable="true"
+                        android:onClick="@{person.onClick}"
+                        android:gravity="center"
+                        android:text="@{userInfo.name}" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="30dp"
+                        android:background="#00ff00"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:text="@{userInfo.name}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearlayout_1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="30dp"
+                        android:background="#00ff00"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:text="TextView#11" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="30dp"
+                        android:background="#ff0000"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:text="TextView#12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearlayout_1"
+                    android:layout_toEndOf="@id/linearlayout_2"
+                    android:layout_toRightOf="@id/linearlayout_2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="30dp"
+                        android:background="#00ff00"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:text="TextView#21" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="30dp"
+                        android:background="#ff0000"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:text="TextView#22" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </com.monkeyliu.smartfocus.AutoFocusFrameLayout>
+    </LinearLayout>
+</layout>

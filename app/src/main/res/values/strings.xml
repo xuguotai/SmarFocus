@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SmartFocus</string>
+    <string name="confirmDialogTitle">信息提示</string>
+    <string name="exitMessage">您确认要退出吗？</string>
+    <string name="confirmDialogPositiveBtnName">确认</string>
+    <string name="confirmDialogNegativeBtnName">取消</string>
+</resources>
