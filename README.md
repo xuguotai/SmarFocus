@@ -88,7 +88,7 @@ autoFocusFrameLayout.setFocusBorderBuilder(focusBorderBuilder);
     <ImageView
         android:id="@+id/item_imageview"
         android:layout_width="150dp"
-        android:layout_height="208dp"
+        android:layout_height="208dp"   ``
         android:tag="focus"
         android:scaleType="fitXY" />
 
