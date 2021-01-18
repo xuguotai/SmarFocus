@@ -43,7 +43,7 @@ AbsFocusBorder.Builder focusBorderBuilder = new ColorFocusBorder.Builder(getCont
                 .borderWidth(2) //border宽度
                 .borderColor(Color.RED) //border颜色
                 .borderRadius(6) //border圆角半径
-                .shadowWidth(20) //shadow半径
+                .shadowWidth(20) //shadow半径   ///
                 .shadowColor(Color.BLUE) //shadow颜色
                 .padding(3) //内边距
                 .scaleX(1.1f) //X方向缩放倍数
